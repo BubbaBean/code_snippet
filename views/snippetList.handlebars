@@ -1,0 +1,33 @@
+<h1>My Snippets</h1>
+<table border="1">
+  <tr>
+    <th>
+      Title
+    </th>
+    <th>
+      Body
+    </th>
+    <th>
+      Notes
+    </th>
+    <th>
+      Language
+    </th>
+    <th>
+      Tags
+    </th>
+    <th></th>
+  </tr>
+
+  {{#snippets}}
+  <tr>
+    <td><a href="/addsnippet?id={{_id}}">{{title}}</a></td>
+    <td>{{body}}</td>
+    <td>{{notes}}</td>
+    <td>{{language}}</td>
+    <td>{{tags}}</td>
+    <td><a href="/deletesnippet/?id={{_id}}">Delete</a></td>
+  </tr>
+  {{/snippets}}
+
+</table>
