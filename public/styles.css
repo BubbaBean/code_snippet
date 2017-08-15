@@ -121,3 +121,21 @@ body {
   font-size: 24px;
   font-weight: bolder;
 }
+
+.welcome{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  font-family: "Just Another Hand", cursive;
+  font-size: 32px;
+  color: white;
+}
+
+.welcome a{
+  margin-top: 20px;
+}
+
+.menu{
+  text-align: center; 
+}
