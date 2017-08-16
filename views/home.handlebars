@@ -2,11 +2,22 @@
 <h1>Welcome to CodeSnippet</h1>
 
 <div class="welcome">
-  <p>Good to see you again, {{user.name}}</p>
+  <p>Good to see you, {{user.name}}!</p>
 
-  <a href="/logout">Log out</a>
-</div>
+  <img class="profile" src="/author_generic.jpg" alt="profile image">
 
-<div class="menu">
-  <p>What would you like to do?</p>
+  <div class="menu">
+    <p>What would you like to do?</p>
+
+    <nav class="navigation">
+        <a class="button" href="/snippetlist">My Snippets</a>
+        <a class="button" href="/addsnippet">New Snippet</a>
+        <a href="/logout">Logout</a>
+    </nav>
+
+    <div class="container">
+      {{{body}}}
+    </div>
+
+  </div>
 </div>

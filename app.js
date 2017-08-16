@@ -20,13 +20,14 @@ mongoose.Promise = bluebird;
 
 //define user model
 const User = require('./models/user');
-// const Snippet = require('./models/snippet');
+const Snippet = require('./models/snippet');
+
 
 //require passport
 const passport = require('passport');
 
 const loginRoutes = require('./routes/login');
-// const snippetsRoutes = require('./routes/snippets');
+const snippetsRoutes = require('./routes/snippets');
 // const searchRoutes = require('./routes/search');
 
 
@@ -93,7 +94,7 @@ app.post('/registrationForm', (req, res) => {
 });
 
 app.use('/', loginRoutes);
-// app.use('/', snippetsRoutes);
+app.use('/', snippetsRoutes);
 // app.use('/', searchRoutes);
 
 //connect app to mongoDB

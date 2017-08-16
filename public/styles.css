@@ -1,8 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css?family=Just+Another+Hand');
+@import url('https://fonts.googleapis.com/css?family=Euphoria+Script|Kaushan+Script|Seaweed+Script');
 
 h1{
-  font-family: "Just Another Hand", cursive;
+  font-family: "Seaweed Script", cursive;
   text-align: center;
   color: white;
   font-size: 72px;
@@ -128,7 +129,7 @@ body {
   display: flex;
   flex-flow: column nowrap;
   font-family: "Just Another Hand", cursive;
-  font-size: 32px;
+  font-size: 48px;
   color: white;
 }
 
@@ -136,6 +137,42 @@ body {
   margin-top: 20px;
 }
 
+.welcome p{
+  margin: 0;
+}
+
+.profile{
+  border-radius: 25px;
+  width: 20%;
+  margin: 5px auto;
+}
+
 .menu{
-  text-align: center; 
+  font-size: 48px;
+  text-align: center;
+}
+
+.navigation a{
+  margin: 10px;
+  font-size: 32px;
+}
+
+.snippet_table{
+  font-family: "Roboto", sans-serif;
+  color: #43E5C9;
+  background: white;
+  border-color: white;
+  width: 80%;
+  margin: 10px auto;
+  font-size: 20px;
+}
+
+.snippet_table th, td, a{
+  font-size: 18px;
+  padding: 10px;
+}
+
+#text_body{ 
+  height: 150px;
+  width: 360px;
 }
