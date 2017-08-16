@@ -8,7 +8,8 @@ const snippetSchema = new Schema({
   language: {type: String},
   body: {type: String, required: true},
   notes: {type: String},
-  tags: []
+  tags: [],
+  userID: {type: Schema.Types.ObjectId}
 });
 
 // create a model for a club

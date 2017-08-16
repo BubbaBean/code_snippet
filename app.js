@@ -18,7 +18,7 @@ const bluebird = require('bluebird');
 //set mongoose promise library
 mongoose.Promise = bluebird;
 
-//define user model
+//define model
 const User = require('./models/user');
 const Snippet = require('./models/snippet');
 

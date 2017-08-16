@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const Snippet = require('../models/snippet');
 
 routes.get('/snippetlist', (req, res) => {
-  Snippet.find()
+  Snippet.find({ userID: req.user.id })
     // then show my clubs
     .then(snippet => res.render('snippetlist', { snippet: snippet }))
     // handle errors
@@ -30,6 +30,7 @@ routes.post('/saveSnippet', (req, res) => {
   if (!req.body.id){
     req.body.id = new mongoose.mongo.ObjectID();
   }
+  req.body.userID = req.user.id;
   Snippet.findByIdAndUpdate(req.body.id, req.body, { upsert: true })
     .then(() => res.redirect('/snippetlist'))
     // catch validation errors
