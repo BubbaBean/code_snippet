@@ -74,8 +74,8 @@ const requireLogin = (req, res, next) => {
 };
 
 app.get('/', requireLogin, (req, res) => {
-  res.render('home', { user: req.user });
-});
+    res.render('home', {user: req.user})
+  });
 
 app.get('/register', (req, res) => {
   res.render('register');

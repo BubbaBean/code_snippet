@@ -1,11 +1,9 @@
 <link rel="stylesheet" href="/styles.css">
 
-<h1> Welcome to CodeSnippet </h1>
+<h1> Welcome to CodeMonkey </h1>
 
-<div class="failure">
-  {{#if failed}}
-  Login failed!
-  {{/if}}
+<div class="logo_container">
+  <img class='login_logo' src="/FullSizeRender.jpg" alt="code monkey logo">
 </div>
 
 
@@ -21,6 +19,12 @@
       <p class="message">Not registered? <a href="/register">Create an account</a></p>
 
     </form>
+
+    <div class="failure">
+      {{#if failed}}
+      Login failed!
+      {{/if}}
+    </div>
 
   </div>
 

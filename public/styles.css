@@ -1,29 +1,85 @@
 
-@import url('https://fonts.googleapis.com/css?family=Just+Another+Hand');
+@import url('https://fonts.googleapis.com/css?family=Courgette');
 @import url('https://fonts.googleapis.com/css?family=Euphoria+Script|Kaushan+Script|Seaweed+Script');
 
 h1{
-  font-family: "Seaweed Script", cursive;
+  font-family: "Courgette", cursive;
   text-align: center;
   color: white;
   font-size: 72px;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
   text-decoration: underline;
   padding-top: 25px;
+  margin-top: 0px;
   letter-spacing: 2;
+  text-shadow: 5px 5px purple;
+}
+
+.header_bar{
+  height: 100px;
+  margin: 0;
+  background: white;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 5px solid purple;
+}
+
+.header_bar p{
+  font-family: "Courgette", cursive;
+  font-size: 24px;
+  color: purple;
+}
+
+.logo_image{
+  height: 75px;
+  width: 7%;
+  margin-left: 10px;
+  border-radius: 20px;
+  border: 2px solid purple;
+}
+
+.logo_container{
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes hide{
+  0%{
+    margin-top: 5px;
+  }
+  50%{
+    margin-top: 40px;
+  }
+  100%{
+    margin-top: 80px;
+  }
+}
+
+.login_logo{
+  position: absolute;
+  z-index: -1;
+  border-radius: 50px;
+  margin: 5px auto;
+  height: 150px;
+  width: 150px;
+  animation: 5s 5s linear infinite alternate hide;
 }
 
 .login-page {
   width: 360px;
   padding: 10px;
-  margin: 20px auto;
+  margin: 75px auto;
 }
+
+
 .form {
   position: relative;
   z-index: 1;
   background: #FFFFFF;
   max-width: 360px;
-  margin: 0 auto 100px;
+  margin: 0 auto 50px;
   padding: 45px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -43,7 +99,8 @@ h1{
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: #43E5C9;
+  background: #12FFD5;
+  border: 1px solid white;
   width: 100%;
   border: 0;
   padding: 15px;
@@ -53,18 +110,23 @@ h1{
   transition: all 0.3 ease;
   cursor: pointer;
 }
+
+.wrapper{
+  height: 600px;
+}
+
 .form button:hover,.form button:active,.form button:focus {
   background: white;
-  color: #43E5C9;
-  border: 1px solid #43E5C9;
+  color: #12FFD5;
+  border: 1px solid #12FFD5;
 }
 .form .message {
-  margin: 15px 0 0;
+  margin: 10px 0 0;
   color: #b3b3b3;
   font-size: 16px;
 }
 .form .message a {
-  color: #43E5C9;
+  color: #12FFD5;
   text-decoration: none;
   font-size: 16px;
 }
@@ -104,23 +166,30 @@ h1{
 .container .info span .fa {
   color: #EF3B3A;
 }
+
+.data_form{
+  margin: 0px;
+}
+
 body {
-  background: #43E5C9; /* fallback for old browsers */
-  background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+  background: #12FFD5; /* fallback for old browsers */
+  /*background: -webkit-linear-gradient(right, #76b852, #8DC26F);
   background: -moz-linear-gradient(right, #76b852, #8DC26F);
-  background: -o-linear-gradient(right, #76b852, #8DC26F);
-  background: #43E5C9;
+  background: -o-linear-gradient(right, #76b852, #8DC26F);*/
+  background: #12FFD5;
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0px;
 }
 
 .failure{
   width: 100%;
   text-align: center;
-  color: white;
+  color: purple;
   font-size: 24px;
   font-weight: bolder;
+  padding-top: 20px;
 }
 
 .welcome{
@@ -128,7 +197,7 @@ body {
   text-align: center;
   display: flex;
   flex-flow: column nowrap;
-  font-family: "Just Another Hand", cursive;
+  font-family: "Courgette", cursive;
   font-size: 48px;
   color: white;
 }
@@ -152,14 +221,42 @@ body {
   text-align: center;
 }
 
+.navigation{
+  padding-right: 25px;
+}
+
 .navigation a{
   margin: 10px;
-  font-size: 32px;
+  font-size: 20px;
+  font-family: "Courgette", cursive;
+  color: purple;
+  background: #12FFD5;
+  border: 2px solid purple;
+  text-shadow: 2px 2px white;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+.list_navigation a{
+  margin: 10px;
+  font-size: 20px;
+  font-family: "Courgette", cursive;
+  color: white;
+  background: purple;
+  border: 2px solid purple;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+.learn_code{
+  border-top: 5px solid white;
+  height: 200px;
+  background: purple;
 }
 
 .snippet_table{
   font-family: "Roboto", sans-serif;
-  color: #43E5C9;
+  color: #12FFD5;
   background: white;
   border-color: white;
   width: 80%;
@@ -172,7 +269,7 @@ body {
   padding: 10px;
 }
 
-#text_body{ 
+#text_body{
   height: 150px;
   width: 360px;
 }

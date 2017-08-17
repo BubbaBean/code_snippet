@@ -1,23 +1,30 @@
 <link rel="stylesheet" href="/styles.css">
-<h1>Welcome to CodeSnippet</h1>
 
-<div class="welcome">
+
+<header class="header_bar">
+  <img class="logo_image" src="/FullSizeRender.jpg" alt="code monkey logo">
+
   <p>Good to see you, {{user.name}}!</p>
 
-  <img class="profile" src="/author_generic.jpg" alt="profile image">
+  <nav class="navigation">
+      <a class="button" href="/profile">Profile</a>
+      <a class="button" href="/snippetlist">My Snippets</a>
+      <a class="button" href="/addsnippet">New Snippet</a>
+      <a href="/logout">Logout</a>
 
-  <div class="menu">
-    <p>What would you like to do?</p>
+  </nav>
+</header>
 
-    <nav class="navigation">
-        <a class="button" href="/snippetlist">My Snippets</a>
-        <a class="button" href="/addsnippet">New Snippet</a>
-        <a href="/logout">Logout</a>
-    </nav>
+<div class="wrapper">
+<h1>Welcome to CodeMonkey</h1>
 
-    <div class="container">
-      {{{body}}}
-    </div>
+<div class="welcome">
 
-  </div>
+  <img class="profile" src="/FullSizeRender.jpg" alt="profile image">
+
 </div>
+</div>
+
+<section class="learn_code">
+  <h1>Learn to Code</h1>
+</section>
