@@ -27,6 +27,7 @@ routes.get('/addsnippet', (req, res) => {
 routes.post('/saveSnippet', (req, res) => {
   //edit snippet
   //set a random number as the ID
+  //need to split array values into individual strings
   if (!req.body.id){
     req.body.id = new mongoose.mongo.ObjectID();
   }

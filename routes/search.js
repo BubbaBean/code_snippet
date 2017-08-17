@@ -15,9 +15,23 @@ routes.use(requireLogin);
 routes.get('/search', (req, res) => {
   let search = req.query.snippets;
 
- Snippet.find([{'language': search}, {tags: search}])
- .then(snippets => res.render('search', {snippets: snippets}))
+ Snippet.find({
+   $and: [{
+       userID: req.user.id
+     },
+     {
+       $or: [{
+         language: search
+       }, {
+         tags: search
+       }]
+     }
+   ]
+ })
+ .then(snippets => res.render('search', {
+   snippets: snippets
+ }))
  .catch(err => res.send('Can not find snippet.'));
-});
+ });
 
 module.exports = routes;

@@ -200,6 +200,7 @@ body {
   font-family: "Courgette", cursive;
   font-size: 48px;
   color: white;
+  overflow: hidden;
 }
 
 .welcome a{
@@ -212,19 +213,10 @@ body {
 
 @keyframes slide{
   0%{
-    margin-right: 0;
-  }
-  25%{
-    margin-right: 100px
-  }
-  50%{
-    margin-right: 200px;
-  }
-  75%{
-    margin-right: 300px;
+    margin-left: 625px;
   }
   100%{
-    margin-right: 400px;
+    margin-left: 4000px;
   }
 }
 
@@ -232,7 +224,7 @@ body {
   border-radius: 25px;
   width: 20%;
   margin: 5px auto;
-  animation: 3s 1s linear 1 slide;
+  animation: 3s 3s linear 1 slide;
 }
 
 .menu{
