@@ -28,7 +28,7 @@ const passport = require('passport');
 
 const loginRoutes = require('./routes/login');
 const snippetsRoutes = require('./routes/snippets');
-// const searchRoutes = require('./routes/search');
+const searchRoutes = require('./routes/search');
 
 
 let url = 'mongodb://localhost:27017/snippets';
@@ -95,7 +95,7 @@ app.post('/registrationForm', (req, res) => {
 
 app.use('/', loginRoutes);
 app.use('/', snippetsRoutes);
-// app.use('/', searchRoutes);
+app.use('/', searchRoutes);
 
 //connect app to mongoDB
 mongoose.connect(url, (err, connection) => {

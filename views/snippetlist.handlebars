@@ -5,6 +5,7 @@
   <img class="logo_image" src="/FullSizeRender.jpg" alt="code monkey logo">
 
   <nav class="navigation">
+      <a class="button" href="/">Profile</a>
       <a class="button" href="/snippetlist">My Snippets</a>
       <a class="button" href="/addsnippet">New Snippet</a>
       <a href="/logout">Logout</a>
@@ -14,12 +15,15 @@
 
 <h1>My Snippets</h1>
 
+<form class="search_form" action="/search" method="get">
+  <input class="search" type="text" name="mySnippets">
+  <button id="search_button">Search</button>
+</form>
+
 <div class="welcome">
-<nav class="list_navigation">
-    <a class="button" href="/">Home</a>
+
     <a class="button" href="/addsnippet">New Snippet</a>
-    <a href="/logout">Logout</a>
-</nav>
+
 </div>
 
 <table class="snippet_table" border="1">

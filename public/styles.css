@@ -210,10 +210,29 @@ body {
   margin: 0;
 }
 
+@keyframes slide{
+  0%{
+    margin-right: 0;
+  }
+  25%{
+    margin-right: 100px
+  }
+  50%{
+    margin-right: 200px;
+  }
+  75%{
+    margin-right: 300px;
+  }
+  100%{
+    margin-right: 400px;
+  }
+}
+
 .profile{
   border-radius: 25px;
   width: 20%;
   margin: 5px auto;
+  animation: 3s 1s linear 1 slide;
 }
 
 .menu{
@@ -229,16 +248,49 @@ body {
   margin: 10px;
   font-size: 20px;
   font-family: "Courgette", cursive;
-  color: purple;
-  background: #12FFD5;
-  border: 2px solid purple;
-  text-shadow: 2px 2px white;
+  color: white;
+  background: purple;
   border-radius: 50px;
   text-decoration: none;
+  border: 2px solid white;
 }
 
-.list_navigation a{
-  margin: 10px;
+.navigation a:hover{
+  color: #12FFD5;
+  background: white;
+  border: 2px solid #12FFD5;
+}
+
+.search_box{
+  margin-top: 20px;
+}
+
+.search{
+  font-family: "Courgette", cursive;
+  font-size: 14px;
+  color: purple;
+  text-align: center;
+}
+
+.search_form{
+  display: flex;
+  flex-flow: column nowrap;
+  width: 30%;
+  margin: 0 auto;
+}
+
+#search_button{
+  width: 25%;
+  margin: 10px auto;
+}
+
+h3{
+  color: purple;
+  text-align: center;
+  font-family: "Courgette", cursive;
+}
+
+.button{
   font-size: 20px;
   font-family: "Courgette", cursive;
   color: white;
@@ -246,6 +298,18 @@ body {
   border: 2px solid purple;
   border-radius: 50px;
   text-decoration: none;
+  margin: 20px auto;
+  width: 10%;
+}
+
+.button:hover{
+  color: #12FFD5;
+  background: white;
+  border: 2px solid #12FFD5;
+}
+
+#snip_add{
+  margin-top: 10px;
 }
 
 .learn_code{
@@ -255,8 +319,7 @@ body {
 }
 
 .snippet_table{
-  font-family: "Roboto", sans-serif;
-  color: #12FFD5;
+  font-family: "Courgette", cursive;
   background: white;
   border-color: white;
   width: 80%;
@@ -264,9 +327,15 @@ body {
   font-size: 20px;
 }
 
-.snippet_table th, td, a{
-  font-size: 18px;
+.snippet_table th{
+  font-size: 24px;
+  text-decoration: underline;
+  color: #12FFD5;
+}
+
+.snippet_table td, a{
   padding: 10px;
+  color: purple;
 }
 
 #text_body{
