@@ -2,10 +2,10 @@
 
 <header class="header_bar">
 
-  <img class="logo_image" src="/FullSizeRender.jpg" alt="code monkey logo">
+  <a href="/"><h1 class="main_logo">ScrumMonkey</h1></a>
 
   <nav class="navigation">
-      <a class="button" href="/">Profile</a>
+      <a class="button" href="/profile">Profile</a>
       <a class="button" href="/snippetlist">My Tasks</a>
       <a class="button" href="/addsnippet">New Task</a>
       <a href="/logout">Logout</a>
@@ -13,7 +13,7 @@
   </nav>
 </header>
 
-<h1>My Tasks</h1>
+<h1 id="my_tasks">My Tasks</h1>
 
 <form class="search_form" action="/search" method="get">
   <input class="search" type="text" name="snippets">
@@ -22,7 +22,7 @@
 
 <div class="welcome">
 
-    <a class="button" href="/addsnippet">New Task</a>
+    <a class="new_task" href="/addsnippet">New Task</a>
 
 </div>
 
@@ -37,7 +37,7 @@
     <th>
       Language
     </th>
-    <th>
+    <th id="body_cell">
       Body
     </th>
     <th>

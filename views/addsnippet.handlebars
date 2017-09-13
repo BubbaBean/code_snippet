@@ -1,10 +1,9 @@
 <link rel="stylesheet" href="/styles.css">
 <header class="header_bar">
 
-  <img class="logo_image" src="/FullSizeRender.jpg" alt="code monkey logo">
-
+  <a href="/"><h1 class="main_logo">ScrumMonkey</h1></a>
   <nav class="navigation">
-      <a class="button" href="/">Profile</a>
+      <a class="button" href="/profile">Profile</a>
       <a class="button" href="/snippetlist">My Tasks</a>
       <a class="button" href="/addsnippet">New Task</a>
       <a class="button" href="/logout">Logout</a>
@@ -12,7 +11,7 @@
   </nav>
 </header>
 
-<h1>Add a Task</h1>
+<h1 id="add_task">Add a Task</h1>
 
 <div class="form">
 <form class="data_form" action="/saveSnippet" method="post">
@@ -28,7 +27,7 @@
   <div class="fieldError">{{errors.language.message}}</div>
   <br />
 
-  <textarea rows="5" cols="5" id="text_body" name="body" value="{{snippet.body}}" placeholder="Insert Code Snippet Here"></textarea>
+  <textarea rows="5" cols="5" id="text_body" name="body" value="{{snippet.body}}" placeholder="Insert Details Here"></textarea>
   <div class="fieldError">{{errors.body.message}}</div>
   <br />
 
@@ -44,5 +43,5 @@
     <input type="hidden" name="id" value="{{snippet._id}}" />
   {{/if}}
 
-  <button class="button-primary">Save Snippet</button>
+  <button class="button-primary">Save Task</button>
 </form>
